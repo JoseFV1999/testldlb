@@ -24,6 +24,7 @@ class LibroFactory extends Factory
             'year' => $this -> faker -> year($max = 'now'),
             'mueble' => $this -> faker -> regexify('[A-Z]{1}[0-9]{2}'),
             'observacion' => $this -> faker -> randomKey(['C' => 1, 'O' => 2]),
+            'disponibilidad' => $this -> faker -> boolean(),
             'asignatura_id' => Asignatura::inRandomOrder()->first()->id,
         ];
     }

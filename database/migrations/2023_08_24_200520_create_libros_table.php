@@ -21,6 +21,7 @@ return new class extends Migration
             $table->smallInteger('year');
             $table->string('mueble', 3);
             $table->char('observacion', 1);
+            $table->boolean('disponibilidad')->nullable()->default(true);
             $table->unsignedBigInteger('asignatura_id');
             $table->foreign('asignatura_id')->references('id')->on('asignaturas');
             //$table->timestamps();
